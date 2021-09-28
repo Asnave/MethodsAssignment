@@ -26,7 +26,7 @@ namespace MethodsAssignment
 
             Console.WriteLine("");
             Console.WriteLine("You began with all your equipment from previous levels");
-            Console.WriteLine("Including a new Score Multiplier which increases your Score by X2");
+            Console.WriteLine("Including a new Score Multiplier which increases your Score by: "+ ScoreM);
             Console.WriteLine("");
             Console.ReadKey(true);
 
@@ -36,18 +36,18 @@ namespace MethodsAssignment
             Console.WriteLine("");
             Console.WriteLine("As you ride into battle you get strucken by an arrow");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Taking -10 Damage");
+            Console.WriteLine("Taking -" + enemyValue + " Damage");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("");
             Console.ReadKey(true);
 
-            AddScore(enemyValue, 2);
+            AddScore(enemyValue, ScoreM);
             ShowHUD();
 
             Console.WriteLine("");
             Console.WriteLine("With your mighty sword out you spear head a goblin");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("You gain: " + enemyValue + " points to your score with the muiltplier of X2 increasing it to 10!");
+            Console.WriteLine("You gain:" + enemyValue + " points to your score with the muiltplier of:" + ScoreM + " increasing it to: " + score );
             Console.WriteLine("");
             Console.ReadKey(true);
             Console.ResetColor();
@@ -61,7 +61,7 @@ namespace MethodsAssignment
             Console.WriteLine("Riding as fast as you are, your Score multiplier falls out of one of your pockets");
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("You gain only +10 points to your score because of the lack of the multiplier ");
+            Console.WriteLine("You gain only +" + enemyValue + " to your score because of the lack of the multiplier ");
             Console.ResetColor();
             Console.WriteLine("");
             Console.ReadKey(true);
